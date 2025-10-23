@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>ReachPoint</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- Top Navigation -->
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="#/landing" data-route>
+          <span class="brand-icon" aria-hidden="true">◆</span>
+          <span class="brand-text">ReachPoint</span>
+        </a>
+
+        <nav class="nav">
+          <a href="#/landing" data-route class="nav-link">Home</a>
+          <a href="#/about" data-route class="nav-link">About</a>
+          <a href ="#/services" data-route class="nav-link">Services</a>
+          <a href="#/contact" data-route class="nav-link">Contact</a>
+          <a href="#/demoSchedule" data-route class="nav-link">Demo Schedule</a>
+        </nav>
+
+        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main App Mount -->
+    <main id="app" class="app-root" role="main" tabindex="-1"></main>
+
+    <!-- Footer (optional) -->
+    <footer class="footer">
+      <div class="container">© <span id="year"></span> ReachPoint. All rights reserved.</div>
+    </footer>
+
+    <!-- App -->
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
