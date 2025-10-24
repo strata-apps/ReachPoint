@@ -14,7 +14,7 @@ export function servicesBanner({
   deleteSpeed = 50,     // ms per character when deleting
   holdTime = 1200,      // ms to hold the full word before deleting
   gapTime = 300,        // ms pause after deleting before next word
-  serviceColor = '#0b1b3f', // navy blue
+  serviceColor = '#e9e9e9', // light gray
   className = '',       // optional extra classes
 } = {}) {
   // Container
