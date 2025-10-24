@@ -1,30 +1,39 @@
 // Landing/screens/landing.js
 import { servicesBanner } from '../components/servicesBanner.js';
+import { servicesDesign } from '../components/servicesDesign.js';
 
 export default function mount(root) {
   // Clear the screen
   root.innerHTML = '';
 
-  // Create the Services Banner with your list:
+  // Typing Services Banner
   const banner = servicesBanner({
     services: [
       'Nonprofits',
-      'Education Institutions',
+      'Schools',
       'Small Businesses',
       'Political Campaigns',
-      'Healthcare',
+      'Clinics',
+      'Churches',
     ],
-    serviceColor: '#e9e9e9', // light gray
+    serviceColor: '#2563eb', // light gray
     // typeSpeed: 80,
     // deleteSpeed: 45,
     holdTime: 1100,
   });
-
-  // Append to the page
   root.appendChild(banner);
 
-  // You can continue composing the rest of the landing content below…
-  // const nextSection = document.createElement('section');
-  // nextSection.textContent = '…';
-  // root.appendChild(nextSection);
+  // Service Design illustration 
+  const designSection = servicesDesign({
+    beforeSrc: 'path/to/before-image.jpg',
+    afterSrc: 'path/to/after-image.jpg',
+    titleBefore: 'Before ReachPoint',
+    titleAfter: 'After ReachPoint',
+    cycleMs: 6000,
+    holdBeforeMs: 1800,
+    transitionMs: 1400,
+    holdAfterMs: 2000,
+    loop: true,
+  });
+  root.appendChild(designSection);  
 }
