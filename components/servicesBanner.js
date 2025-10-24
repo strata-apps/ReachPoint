@@ -26,7 +26,7 @@ export function servicesBanner({
         ${titlePrefix}<span class="sb-service"></span>
         <span class="sb-caret" aria-hidden="true"></span>
       </h1>
-      <p class="sb-sub">Streamline pipelines, automate follow-ups, and turn relationships into revenue.</p>
+      <p class="sb-sub">The easiest and most efficient way to manage, contact and serve your community.</p>
     </div>
   `;
 
@@ -78,7 +78,7 @@ export function servicesBanner({
   const target = wrap.querySelector('.sb-service');
   let wordIdx = 0;
   let text = '';
-  let typing = true; // typing vs deleting
+  let typing = true; //
   let rafId = 0;
   let timerId = 0;
 

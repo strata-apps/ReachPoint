@@ -8,18 +8,16 @@ export default function mount(root) {
   // Create the Services Banner with your list:
   const banner = servicesBanner({
     services: [
-      'Agencies',
-      'Contractors',
-      'Tutoring Teams',
       'Nonprofits',
-      'Real Estate',
+      'Education Institutions',
+      'Small Businesses',
+      'Political Campaigns',
       'Healthcare',
     ],
-    // optional overrides:
-    // serviceColor: '#0b1b3f',
+    serviceColor: '#e9e9e9', // light gray
     // typeSpeed: 80,
     // deleteSpeed: 45,
-    // holdTime: 1200,
+    holdTime: 1100,
   });
 
   // Append to the page

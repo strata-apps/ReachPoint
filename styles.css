@@ -1,7 +1,7 @@
-:root{
-  --bg:#f7f8fb;
+:root{  
+  --bg:#000000; /* #f7f8fb; for white */
   --panel:#ffffff;
-  --ink:#0f172a;
+  --ink:#e9e9e9; /* #0f172a; for original black */
   --muted:#6b7280;
   --line:#e5e7eb;
   --brand:#111827;
