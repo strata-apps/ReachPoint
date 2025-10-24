@@ -21,19 +21,5 @@ export default function mount(root) {
     // deleteSpeed: 45,
     holdTime: 1100,
   });
-  root.appendChild(banner);
-
-  // Service Design illustration 
-  const designSection = servicesDesign({
-    beforeSrc: 'path/to/before-image.jpg',
-    afterSrc: 'path/to/after-image.jpg',
-    titleBefore: 'Before ReachPoint',
-    titleAfter: 'After ReachPoint',
-    cycleMs: 6000,
-    holdBeforeMs: 1800,
-    transitionMs: 1400,
-    holdAfterMs: 2000,
-    loop: true,
-  });
-  root.appendChild(designSection);  
+  root.appendChild(banner); 
 }
