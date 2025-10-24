@@ -14,7 +14,7 @@ export function servicesBanner({
   deleteSpeed = 50,     // ms per character when deleting
   holdTime = 1200,      // ms to hold the full word before deleting
   gapTime = 300,        // ms pause after deleting before next word
-  serviceColor = '#e9e9e9', // light gray
+  serviceColor = '#0b1b3f', // navy blue
   className = '',       // optional extra classes
 } = {}) {
   // Container
@@ -49,7 +49,7 @@ export function servicesBanner({
       font-weight: 900;
       line-height: 1.1;
       letter-spacing: .2px;
-      color: #0f172a;
+      color: #e9e9e9;
     }
     .services-banner .sb-service {
       color: ${serviceColor};
@@ -67,7 +67,7 @@ export function servicesBanner({
     @keyframes sb-caret { 50% { opacity: 0; } }
     .services-banner .sb-sub {
       margin: 14px auto 0;
-      color: #6b7280;
+      color: #d0d5dfff;
       font-size: clamp(14px, 1.6vw, 18px);
       max-width: 740px;
     }
