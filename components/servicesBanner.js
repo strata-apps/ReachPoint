@@ -1,12 +1,4 @@
 // Landing/components/servicesBanner.js
-
-/**
- * Services Banner
- * Usage:
- *   import { servicesBanner } from '../components/servicesBanner.js';
- *   const el = servicesBanner({ services: ['Agencies', 'Contractors', 'Tutors'] });
- *   root.appendChild(el);
- */
 export function servicesBanner({
   titlePrefix = 'The Complete CRM for ',
   services = ['Agencies', 'Consultants', 'Startups'],
