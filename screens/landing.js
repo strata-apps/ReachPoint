@@ -3,7 +3,8 @@ import { servicesBanner } from '../components/servicesBanner.js';
 import {
   servicesSection,
   servicesActionSection,
-  comparisonMatrixSection
+  comparisonMatrixSection,
+  ctaBandSection
 } from '../components/services.js';
  
 
@@ -75,9 +76,12 @@ export default function mount(root) {
   // features section
   root.appendChild(servicesSection());
 
-  // “In Action” cards + CTA band
+  // “In Action” cards 
   root.appendChild(servicesActionSection());
 
   // Comparison matrix
   root.appendChild(comparisonMatrixSection());
+
+  // CTA band
+  root.appendChild(ctaBandSection());
 }

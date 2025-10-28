@@ -111,9 +111,12 @@ export function servicesActionSection() {
     grid.appendChild(card);
   });
   sec.appendChild(grid);
+  return sec;
+}
 
-  // CTA band
-  const cta = document.createElement('div');
+// --- CTA band section  ---
+export function ctaBandSection() {
+  const cta = document.createElement('section');
   cta.className = 'cta-band';
   cta.innerHTML = `
     <div class="cta-copy">
@@ -125,9 +128,7 @@ export function servicesActionSection() {
       <a class="btn" style="background-color: #2563eb; color: #ffffff;" href="#/demoSchedule" data-route>Schedule<br/>Demo</a>
     </div>
   `;
-  sec.appendChild(cta);
-
-  return sec;
+  return cta;
 }
 
 // ——— Comparison Matrix ———
