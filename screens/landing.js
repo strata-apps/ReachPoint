@@ -34,8 +34,7 @@ export default function mount(root) {
   gif.style.maxWidth = '100%';
   gif.style.width = '700px';
   gif.style.height = 'auto';
-  gif.style.borderRadius = '12px';
-  gif.style.boxShadow = '0 8px 24px rgba(0,0,0,0.2)';
+  gif.style.boxShadow = '0 8px 24px rgba(255, 255, 255, 1)';
 
   // Optional: graceful fallback if the asset is missing / misnamed
   gif.onerror = () => {
