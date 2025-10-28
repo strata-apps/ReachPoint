@@ -255,3 +255,14 @@ body {
 .mark.yes { background: rgba(34,197,94,.2); border-color: rgba(34,197,94,.35); }
 .mark.no  { background: rgba(239,68,68,.2); border-color: rgba(239,68,68,.35); }
 
+/* Scroll-reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity .6s ease, transform .6s ease;
+  will-change: opacity, transform;
+}
+.reveal.show {
+  opacity: 1;
+  transform: none;
+}

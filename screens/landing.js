@@ -11,6 +11,24 @@ export default function mount(root) {
   // Clear the screen
   root.innerHTML = '';
 
+  // --- Scroll-reveal setup ---------------------------------
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) {
+        e.target.classList.add('show');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -10% 0px' });
+
+  // helper: mark a node as reveal-on-scroll (+ optional stagger delay)
+  function reveal(node, delayMs = 0) {
+    node.classList.add('reveal');
+    if (delayMs) node.style.transitionDelay = `${delayMs}ms`;
+    io.observe(node);
+    return node;
+  }
+
   // Typing Services Banner
   const banner = servicesBanner({
     services: [
