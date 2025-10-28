@@ -1,13 +1,13 @@
-:root {  
-  --bg:#000000;              /* Deep black background */
-  --panel:#111111;           /* Slightly lighter panel for contrast */
-  --ink:#ffffff;             /* Main text color */
-  --muted:#9ca3af;           /* Subtle muted text */
-  --line:#1f2937;            /* Soft gray border lines */
-  --brand:#ffffff;           /* Brand text / icon color */
-  --accent:#2563eb;          /* Bright electric blue accent */
-  --accent-ink:#ffffff;      /* Text on accent */
-  --shadow:0 8px 24px rgba(0,0,0,0.6);
+:root {
+  --bg: #ffffff;              /* White background */
+  --panel: #f9fafb;           /* Slightly tinted panel for contrast */
+  --ink: #0f172a;             /* Primary text color (dark navy/charcoal) */
+  --muted: #6b7280;           /* Muted gray text */
+  --line: #e5e7eb;            /* Soft border gray */
+  --brand: #1e3a8a;           /* Deep blue brand text/icon color */
+  --accent: #2563eb;          /* Bright electric blue accent */
+  --accent-ink: #ffffff;      /* Text on accent */
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.08); /* Soft, subtle shadow for light surfaces */
 }
 
 * { box-sizing: border-box; }
@@ -24,7 +24,7 @@ body {
 /* Topbar */
 .topbar {
   position: sticky; top: 0; z-index: 50;
-  background: rgba(18,18,18,0.9);
+  background: #ffffff;
   backdrop-filter: saturate(180%) blur(10px);
   border-bottom: 1px solid var(--line);
 }
@@ -51,7 +51,7 @@ body {
 
 /* Nav */
 .nav {
-  display: flex; align-items: center; gap: 10px; color: #e9e9e9;
+  display: flex; align-items: center; gap: 10px; color: #080808;
 }
 .nav-link {
   display: inline-flex; align-items: center; justify-content: center;

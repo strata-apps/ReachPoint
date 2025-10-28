@@ -144,7 +144,7 @@ export function comparisonMatrixSection() {
   sec.className = 'compare';
 
   sec.innerHTML = `
-    <h2 class="compare-title">Flow of Use Comparison</h2>
+    <h2 class="compare-title">The Most Efficient Tool on the Market</h2>
     <div class="table-wrap">
       <table class="cmp-table" role="table">
         <thead>
