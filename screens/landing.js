@@ -25,7 +25,7 @@ export default function mount(root) {
   // Video of services from the assets folder (inside the components folder)
   const videoSection = document.createElement('div');
   videoSection.style.textAlign = 'center';
-  videoSection.style.marginTop = '18px';
+  videoSection.style.marginTop = '8px';
 
   const video = document.createElement('video');
   // Build URL relative to THIS file (screens/landing.js)
@@ -45,4 +45,9 @@ export default function mount(root) {
 
   videoSection.appendChild(video);
   root.appendChild(videoSection);
+
+
+  // features section
+  const features = servicesSection();
+  root.appendChild(features);
 }
