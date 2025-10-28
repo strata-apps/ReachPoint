@@ -259,7 +259,7 @@ body {
 .reveal {
   opacity: 0;
   transform: translateY(18px);
-  transition: opacity .6s ease, transform .6s ease;
+  transition: opacity .4s ease, transform .6s ease;
   will-change: opacity, transform;
 }
 .reveal.show {
