@@ -118,11 +118,11 @@ export function servicesActionSection() {
   cta.innerHTML = `
     <div class="cta-copy">
       <h3 class="cta-title">Ready to Transform Your Outreach?</h3>
-      <p class="cta-sub">Join thousands of teams who have increased their conversion rates with ReachPoint’s powerful CRM platform.</p>
+      <p class="cta-sub">Join the movement of teams who have increased their conversion rates with ReachPoint’s powerful CRM platform.</p>
     </div>
     <div class="cta-actions">
       <a class="btn primary" href="#/contact" data-route>Connect with our<br/>Team</a>
-      <a class="btn" href="#/demoSchedule" data-route>Schedule<br/>Demo</a>
+      <a class="btn" style="background-color: #2563eb; color: #ffffff;" href="#/demoSchedule" data-route>Schedule<br/>Demo</a>
     </div>
   `;
   sec.appendChild(cta);
