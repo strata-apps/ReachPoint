@@ -48,6 +48,8 @@ export default function mount(root) {
   video.muted = true;      // required for autoplay to work in browsers
   video.playsInline = true; // avoids full-screen behavior on mobile
   video.controls = false;  // hide controls
+  video.style.boxShadow = 'none';
+  video.style.backgroundColor = 'white';
 
   videoSection.appendChild(video);
   root.appendChild(videoSection);
