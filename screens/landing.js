@@ -1,6 +1,5 @@
 // Landing/screens/landing.js
 import { servicesBanner } from '../components/servicesBanner.js';
-import { servicesDesign } from '../components/servicesDesign.js';
 
 export default function mount(root) {
   // Clear the screen
