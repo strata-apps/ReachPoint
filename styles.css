@@ -204,7 +204,7 @@ body {
 .tag {
   display: inline-block; font-size: 12px; font-weight: 800;
   padding: 6px 10px; border-radius: 999px;
-  color: #2b3b66; background: rgba(37,99,235,.16); border: 1px solid rgba(37,99,235,.25);
+  color: #0e88ec; background: rgba(37,99,235,.16); border: 1px solid rgba(37,99,235,.25);
   margin-bottom: 12px;
 }
 

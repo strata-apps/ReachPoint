@@ -121,7 +121,7 @@ export function servicesActionSection() {
       <p class="cta-sub">Join thousands of teams who have increased their conversion rates with ReachPoint’s powerful CRM platform.</p>
     </div>
     <div class="cta-actions">
-      <a class="btn primary" href="#/contact" data-route>Start Free<br/>Trial</a>
+      <a class="btn primary" href="#/contact" data-route>Connect with our<br/>Team</a>
       <a class="btn" href="#/demoSchedule" data-route>Schedule<br/>Demo</a>
     </div>
   `;
