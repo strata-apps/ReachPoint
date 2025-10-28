@@ -32,7 +32,7 @@ export default function mount(root) {
   video.src = new URL('../components/assets/serviceMap.mp4', import.meta.url).href;
   video.alt = 'ReachPoint demo animation';
   video.style.maxWidth = '100%';
-  video.style.width = '900px';
+  video.style.width = '1200px';
   video.style.height = 'auto';
   video.controls = true;
 
