@@ -1,6 +1,11 @@
 // Landing/screens/landing.js
 import { servicesBanner } from '../components/servicesBanner.js';
-import { servicesSection } from '../components/services.js';
+import {
+  servicesSection,
+  servicesActionSection,
+  comparisonMatrixSection
+} from '../components/services.js';
+
 
 export default function mount(root) {
   // Clear the screen
