@@ -27,13 +27,14 @@ export default function mount(root) {
   gifSection.style.textAlign = 'center';
   gifSection.style.marginTop = '25px';
 
-  const gif = document.createElement('img');
+  const gif = document.createElement('video');
   // Build URL relative to THIS file (screens/landing.js)
-  gif.src = new URL('../components/assets/serviceMap.gif', import.meta.url).href;
+  gif.src = new URL('../components/assets/serviceMap.mp4', import.meta.url).href;
   gif.alt = 'ReachPoint demo animation';
   gif.style.maxWidth = '100%';
   gif.style.width = '700px';
   gif.style.height = 'auto';
+  gif.controls = true;
 
   // Optional: graceful fallback if the asset is missing / misnamed
   gif.onerror = () => {
