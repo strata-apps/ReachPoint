@@ -22,28 +22,27 @@ export default function mount(root) {
   });
   root.appendChild(banner); 
 
-  // Gif of services from the assets folder (inside the components folder)
-  const gifSection = document.createElement('div');
-  gifSection.style.textAlign = 'center';
-  gifSection.style.marginTop = '25px';
+  // Video of services from the assets folder (inside the components folder)
+  const videoSection = document.createElement('div');
+  videoSection.style.textAlign = 'center';
+  videoSection.style.marginTop = '18px';
 
-  const gif = document.createElement('video');
+  const video = document.createElement('video');
   // Build URL relative to THIS file (screens/landing.js)
-  gif.src = new URL('../components/assets/serviceMap.mp4', import.meta.url).href;
-  gif.alt = 'ReachPoint demo animation';
-  gif.style.maxWidth = '100%';
-  gif.style.width = '700px';
-  gif.style.height = 'auto';
-  gif.controls = true;
+  video.src = new URL('../components/assets/serviceMap.mp4', import.meta.url).href;
+  video.alt = 'ReachPoint demo animation';
+  video.style.maxWidth = '100%';
+  video.style.width = '900px';
+  video.style.height = 'auto';
+  video.controls = true;
 
-  // Optional: graceful fallback if the asset is missing / misnamed
-  gif.onerror = () => {
-    gif.replaceWith(Object.assign(document.createElement('div'), {
-      className: 'card',
-      innerHTML: `<p style="color:#9ca3af">GIF not found at <code>components/assets/serviceMap.gif</code>. Check filename & path.</p>`
-    }));
-  };
+  // 👇 Key settings for silent looping playback
+  video.autoplay = true;   // start automatically
+  video.loop = true;       // loop forever
+  video.muted = true;      // required for autoplay to work in browsers
+  video.playsInline = true; // avoids full-screen behavior on mobile
+  video.controls = false;  // hide controls
 
-  gifSection.appendChild(gif);
-  root.appendChild(gifSection);
+  videoSection.appendChild(video);
+  root.appendChild(videoSection);
 }
