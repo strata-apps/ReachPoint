@@ -25,13 +25,14 @@ export default function mount(root) {
   // Gif of services from the assets folder (inside the components folder)
   const gifSection = document.createElement('div');
   gifSection.style.textAlign = 'center';
-  gifSection.style.marginTop = '40px';
+  gifSection.style.marginTop = '25px';
 
   const gif = document.createElement('img');
   // Build URL relative to THIS file (screens/landing.js)
   gif.src = new URL('../components/assets/serviceMap.gif', import.meta.url).href;
   gif.alt = 'ReachPoint demo animation';
-  gif.style.maxWidth = '90%';
+  gif.style.maxWidth = '100%';
+  gif.style.width = '700px';
   gif.style.height = 'auto';
   gif.style.borderRadius = '12px';
   gif.style.boxShadow = '0 8px 24px rgba(0,0,0,0.2)';
