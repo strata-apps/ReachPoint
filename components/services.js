@@ -65,4 +65,122 @@ export function servicesSection() {
   return section;
 }
 
-export default servicesSection;
+// ——— “See ReachPoint in Action” section ———
+export function servicesActionSection() {
+  const data = [
+    {
+      tag: 'Campaign Management',
+      title: 'Organize Your Campaigns',
+      desc: 'Create and manage multiple outreach campaigns with detailed progress tracking.',
+    },
+    {
+      tag: 'Analytics',
+      title: 'Real-time Insights',
+      desc: 'Track your campaign performance with detailed analytics and progress metrics.',
+    },
+    {
+      tag: 'Live Calling',
+      title: 'Unified Call Interface',
+      desc: 'Make calls, view contact details, and document notes all from one screen.',
+    },
+  ];
+
+  const sec = document.createElement('section');
+  sec.className = 'action';
+
+  const head = document.createElement('div');
+  head.className = 'action-head';
+  head.innerHTML = `
+    <h2 class="action-title">See ReachPoint in Action</h2>
+    <p class="action-sub">From campaign management to live calling interfaces, ReachPoint provides everything you need to run successful outreach campaigns.</p>
+  `;
+  sec.appendChild(head);
+
+  // cards
+  const grid = document.createElement('div');
+  grid.className = 'action-grid';
+  data.forEach(d => {
+    const card = document.createElement('article');
+    card.className = 'card action-card';
+    card.innerHTML = `
+      <div class="tag">${d.tag}</div>
+      <div class="media-placeholder" aria-hidden="true"></div>
+      <h3 class="action-card-title">${d.title}</h3>
+      <p class="action-card-desc">${d.desc}</p>
+    `;
+    grid.appendChild(card);
+  });
+  sec.appendChild(grid);
+
+  // CTA band
+  const cta = document.createElement('div');
+  cta.className = 'cta-band';
+  cta.innerHTML = `
+    <div class="cta-copy">
+      <h3 class="cta-title">Ready to Transform Your Outreach?</h3>
+      <p class="cta-sub">Join thousands of teams who have increased their conversion rates with ReachPoint’s powerful CRM platform.</p>
+    </div>
+    <div class="cta-actions">
+      <a class="btn primary" href="#/contact" data-route>Start Free<br/>Trial</a>
+      <a class="btn" href="#/demoSchedule" data-route>Schedule<br/>Demo</a>
+    </div>
+  `;
+  sec.appendChild(cta);
+
+  return sec;
+}
+
+// ——— Comparison Matrix ———
+export function comparisonMatrixSection() {
+  const rows = [
+    ['Task Creation and Management', true,  true,  false],
+    ['Real-Time Insights',           true,  false, false],
+    ['Flexible Event Creation',     true,  false, true ],
+    ['Unified Caller Interface',    true,  false, false],
+    ['Client-Facing Dynamic DB',    true,  false, true ],
+  ];
+
+  const sec = document.createElement('section');
+  sec.className = 'compare';
+
+  sec.innerHTML = `
+    <h2 class="compare-title">Flow of Use Comparison</h2>
+    <div class="table-wrap">
+      <table class="cmp-table" role="table">
+        <thead>
+          <tr>
+            <th scope="col">Flow of Use</th>
+            <th scope="col">ReachPoint</th>
+            <th scope="col">Salesforce</th>
+            <th scope="col">Spreadsheets</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  `;
+
+  const tbody = sec.querySelector('tbody');
+  rows.forEach(([label, rp, sf, ss]) => {
+    const tr = document.createElement('tr');
+
+    const td0 = document.createElement('th');
+    td0.scope = 'row';
+    td0.innerHTML = `<span class="pill">${label}</span>`;
+
+    const td1 = document.createElement('td'); td1.innerHTML = badge(rp);
+    const td2 = document.createElement('td'); td2.innerHTML = badge(sf);
+    const td3 = document.createElement('td'); td3.innerHTML = badge(ss);
+
+    tr.append(td0, td1, td2, td3);
+    tbody.appendChild(tr);
+  });
+
+  return sec;
+
+  function badge(ok) {
+    return `<span class="mark ${ok ? 'yes' : 'no'}" aria-label="${ok ? 'Included' : 'Not included'}">${ok ? '✔' : '✖'}</span>`;
+  }
+}
+
+export default { servicesSection, servicesActionSection, comparisonMatrixSection };

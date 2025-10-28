@@ -49,6 +49,11 @@ export default function mount(root) {
 
 
   // features section
-  const features = servicesSection();
-  root.appendChild(features);
+  root.appendChild(servicesSection());
+
+  // “In Action” cards + CTA band
+  root.appendChild(servicesActionSection());
+
+  // Comparison matrix
+  root.appendChild(comparisonMatrixSection());
 }

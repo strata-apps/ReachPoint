@@ -184,3 +184,74 @@ body {
 .feature-desc { margin: 0; color: var(--muted); line-height: 1.55; 
 }
 
+/* ===== See ReachPoint in Action ===== */
+.action { margin: 56px 0; }
+.action-head { text-align: center; margin-bottom: 18px; }
+.action-title { font-size: 26px; font-weight: 900; color: var(--ink); margin: 0 0 6px; }
+.action-sub { color: var(--muted); max-width: 860px; margin: 0 auto; }
+
+.action-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 18px;
+}
+@media (max-width: 980px) { .action-grid { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+@media (max-width: 640px) { .action-grid { grid-template-columns: 1fr; } }
+
+.action-card { padding: 16px; border-radius: 16px; }
+.action-card:hover { transform: translateY(-2px); transition: transform .12s ease; }
+
+.tag {
+  display: inline-block; font-size: 12px; font-weight: 800;
+  padding: 6px 10px; border-radius: 999px;
+  color: #2b3b66; background: rgba(37,99,235,.16); border: 1px solid rgba(37,99,235,.25);
+  margin-bottom: 12px;
+}
+
+.media-placeholder {
+  height: 140px; border-radius: 12px;
+  border: 2px dashed rgba(148,163,184,.4);
+  background: rgba(148,163,184,.08);
+  margin-bottom: 12px;
+}
+
+.action-card-title { margin: 4px 0 6px; font-size: 16px; font-weight: 800; color: var(--ink); }
+.action-card-desc { margin: 0; color: var(--muted); }
+
+/* CTA band */
+.cta-band {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  margin-top: 18px; padding: 18px;
+  border-radius: 16px; border: 1px solid rgba(37,99,235,.25);
+  background: rgba(37,99,235,.12);
+}
+.cta-title { margin: 0 0 6px; font-size: 18px; font-weight: 900; color: var(--ink); }
+.cta-sub { margin: 0; color: var(--muted); }
+.cta-actions { display: flex; gap: 10px; }
+.cta-actions .btn { min-width: 150px; text-align: center; }
+
+/* ===== Comparison Matrix ===== */
+.compare { margin: 56px 0; }
+.compare-title { text-align: center; font-size: 24px; font-weight: 900; margin-bottom: 14px; color: var(--ink); }
+.table-wrap { overflow-x: auto; border-radius: 12px; }
+.cmp-table { width: 100%; border-collapse: collapse; }
+.cmp-table thead th {
+  text-align: left; font-weight: 900; padding: 12px 14px; color: var(--ink);
+  border-bottom: 2px solid rgba(148,163,184,.25);
+}
+.cmp-table tbody th, .cmp-table td { padding: 12px 14px; border-bottom: 1px solid rgba(148,163,184,.15); }
+.cmp-table tbody th { color: var(--ink); font-weight: 700; }
+
+.pill {
+  display: inline-block; background: rgba(148,163,184,.18); color: var(--ink);
+  padding: 8px 12px; border-radius: 10px; font-weight: 700;
+}
+
+.mark {
+  display: inline-grid; place-items: center;
+  width: 28px; height: 28px; border-radius: 999px; font-weight: 900;
+  border: 2px solid transparent;
+}
+.mark.yes { background: rgba(34,197,94,.2); border-color: rgba(34,197,94,.35); }
+.mark.no  { background: rgba(239,68,68,.2); border-color: rgba(239,68,68,.35); }
+
