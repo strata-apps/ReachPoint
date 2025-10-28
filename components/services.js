@@ -184,4 +184,4 @@ export function comparisonMatrixSection() {
   }
 }
 
-export default { servicesSection, servicesActionSection, comparisonMatrixSection };
+export default { servicesSection, servicesActionSection, comparisonMatrixSection, ctaBandSection };
