@@ -35,7 +35,7 @@ export default function mount(root) {
 
   const video = document.createElement('video');
   // Build URL relative to THIS file (screens/landing.js)
-  video.src = new URL('../components/assets/serviceMap.mp4', import.meta.url).href;
+  video.src = new URL('../components/assets/fullserviceMap.mp4', import.meta.url).href;
   video.alt = 'ReachPoint demo animation';
   video.style.maxWidth = '100%';
   video.style.width = '1200px';

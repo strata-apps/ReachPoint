@@ -49,7 +49,7 @@ export function servicesBanner({
       font-weight: 900;
       line-height: 1.1;
       letter-spacing: .2px;
-      color: #e9e9e9;
+      color: #0f0f0fff;
     }
     .services-banner .sb-service {
       color: ${serviceColor};
@@ -67,7 +67,7 @@ export function servicesBanner({
     @keyframes sb-caret { 50% { opacity: 0; } }
     .services-banner .sb-sub {
       margin: 14px auto 0;
-      color: #d0d5dfff;
+      color: #000000ff;
       font-size: clamp(14px, 1.6vw, 18px);
       max-width: 740px;
     }
