@@ -28,12 +28,21 @@ export default function mount(root) {
   gifSection.style.marginTop = '40px';
 
   const gif = document.createElement('img');
-  gif.src = '../components/assets/serviceMap.gif';
+  // Build URL relative to THIS file (screens/landing.js)
+  gif.src = new URL('../components/assets/serviceMap.gif', import.meta.url).href;
   gif.alt = 'ReachPoint demo animation';
   gif.style.maxWidth = '90%';
   gif.style.height = 'auto';
   gif.style.borderRadius = '12px';
   gif.style.boxShadow = '0 8px 24px rgba(0,0,0,0.2)';
+
+  // Optional: graceful fallback if the asset is missing / misnamed
+  gif.onerror = () => {
+    gif.replaceWith(Object.assign(document.createElement('div'), {
+      className: 'card',
+      innerHTML: `<p style="color:#9ca3af">GIF not found at <code>components/assets/serviceMap.gif</code>. Check filename & path.</p>`
+    }));
+  };
 
   gifSection.appendChild(gif);
   root.appendChild(gifSection);
