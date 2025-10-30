@@ -13,7 +13,7 @@ export default function mount(root) {
     <section class="features reveal" aria-labelledby="team-title">
       <div class="features-head">
         <h2 id="team-title" class="features-title">Meet the Team</h2>
-        <p class="features-sub">Our team brings together talented, IV-league professionals who have a passion for public service.</p>
+        <p class="features-sub">Our team brings together talented, Ivy-league professionals who have a passion for public service.</p>
       </div>
 
       <div class="feature-grid" id="team-grid"></div>
