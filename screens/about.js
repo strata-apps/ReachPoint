@@ -4,7 +4,7 @@ export default function mount(root) {
   root.innerHTML = `
     <div class="sb-inner">
       <h1 class="sb-title">
-        Bringing Enterprise Level Solutions to Grassroot Movements
+        <span style="font-weight: bolder;">Bringing Enterprise Level Solutions to Grassroot Movements</span>
         <span class="sb-caret" aria-hidden="true"></span>
       </h1>
       <p class="sb-sub">The mission behind ReachPoint is to ensure that service-oriented nonprofits, small businesses, academic institutions and any grassroot movements are able to effectively serve their communities without economic and technological barriers. These businesses and organizations are the lifeline of our communities. Our mission is to help you reach your mission.</p>
