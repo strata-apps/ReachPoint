@@ -2,18 +2,18 @@
 export default function mount(root) {
   // Top + paragraph + "Meet the Team" using existing styles
   root.innerHTML = `
-    <section class="card reveal">
-      <h1 class="card-title">Bringing Enterprise Level Solutions to Grassroot Nonprofits</h1>
-      <p id="about-blurb">
-        Replace this with your story. Share your mission, the communities you serve,
-        and how your tools help staff, volunteers, and students succeed.
-      </p>
-    </section>
+    <div class="sb-inner">
+      <h1 class="sb-title">
+        Bringing Enterprise Level Solutions to Grassroot Movements
+        <span class="sb-caret" aria-hidden="true"></span>
+      </h1>
+      <p class="sb-sub">The mission behind ReachPoint is to ensure that service-oriented nonprofits, small businesses, academic institutions and any grassroot movements are able to effectively serve their communities without economic and technological barriers. These businesses and organizations are the lifeline of our communities. Our mission is to help you reach your mission.</p>
+    </div>
 
     <section class="features reveal" aria-labelledby="team-title">
       <div class="features-head">
         <h2 id="team-title" class="features-title">Meet the Team</h2>
-        <p class="features-sub">The humans building and supporting the platform.</p>
+        <p class="features-sub">Our team brings together talented, IV-league professionals who have a passion for public service.</p>
       </div>
 
       <div class="feature-grid" id="team-grid"></div>
@@ -22,10 +22,8 @@ export default function mount(root) {
 
   // Example team data (edit as you like)
   const team = [
-    { emoji: "🧭", name: "Jason", role: "Founder & Executive Director", blurb: "Vision, partnerships, and strategy." },
-    { emoji: "🛠️", name: "Darian", role: "Product & Engineering", blurb: "Builds platforms for student success." },
-    { emoji: "🤝", name: "Ariana", role: "Programs & Outreach", blurb: "Connects families to resources." },
-    { emoji: "📣", name: "Karla", role: "Communications", blurb: "Tells the stories that matter." },
+    { photo: "./assets/darian.jpg", name: "Darian", role: "Co-Founder: Product and Engineering", blurb: "Darian graduated from Harvard in 2025 and has years of experience in management consulting, product development, government and nonprofit solutions." },
+    { photo: "./assets/member.jpg", name: "Member", role: "About our member." },
   ];
 
   // Render “feature cards” for profiles using your existing .feature-card styles
