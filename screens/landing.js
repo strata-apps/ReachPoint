@@ -76,11 +76,11 @@ export default function mount(root) {
   // features section
   root.appendChild(servicesSection());
 
-  // “In Action” cards 
-  root.appendChild(servicesActionSection());
-
   // Comparison matrix
   root.appendChild(comparisonMatrixSection());
+
+    // “In Action” cards 
+  //root.appendChild(servicesActionSection());
 
   // CTA band
   root.appendChild(ctaBandSection());

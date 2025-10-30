@@ -23,7 +23,6 @@ export default function mount(root) {
   // Example team data (edit as you like)
   const team = [
     { photo: "./assets/darian.jpg", name: "Darian", role: "Co-Founder: Product and Engineering", blurb: "Darian graduated from Harvard in 2025 and has years of experience in management consulting, product development, government and nonprofit solutions." },
-    { photo: "./assets/member.jpg", name: "Member", role: "About our member." },
   ];
 
   // Render “feature cards” for profiles using your existing .feature-card styles
