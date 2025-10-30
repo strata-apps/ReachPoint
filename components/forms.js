@@ -12,7 +12,7 @@ export function serviceRecommendationQuiz() {
       desc: 'Single place to dial, log outcomes, queue calls, and sync notes to contacts.',
       icon: '📞',
     },
-    'Broadcast & 2-Way SMS': {
+    'Automated Survey Creation and Collection': {
       on: false,
       desc: 'Send announcements, reminders, and have real 2-way text conversations at scale.',
       icon: '💬',
@@ -43,14 +43,15 @@ export function serviceRecommendationQuiz() {
       prompt: 'How many calls does your team typically make in a day?',
       options: [
         { label: '< 10', value: '<10' },
-        { label: '10 – 19', value: '10-19' },
+        { label: '10+', value: '10+' },
         { label: '20+', value: '20+' },
         { label: '30+', value: '30+' },
         { label: '50+', value: '50+' },
+        { label: '100+', value: '100+' },
       ],
     },
     {
-      id: 'smsCadence',
+      id: 'surveyCadence',
       prompt: 'How often do you send SMS/text updates to your community?',
       options: [
         { label: 'Weekly or more', value: 'weekly+' },
@@ -233,10 +234,10 @@ export function serviceRecommendationQuiz() {
       services['Unified Calling Interface'].on = true;
     }
 
-    // Q2: smsCadence → Broadcast & 2-Way SMS if weekly+ or planning
-    const sms = answers['smsCadence'];
-    if (sms === 'weekly+' || sms === 'planning') {
-      services['Broadcast & 2-Way SMS'].on = true;
+    // Q2: surveyCadence → Automated Survey Creation and Collection if weekly+ or planning
+    const surveys = answers['surveyCadence'];
+    if (surveys === 'weekly+' || surveys === 'planning') {
+      services['Automated Survey Creation and Collection'].on = true;
     }
 
     // Q3: volunteerSize → Tasks & Volunteer Coordination if >= 25
