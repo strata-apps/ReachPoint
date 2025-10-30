@@ -84,6 +84,10 @@ async function navigate(route) {
     if (typeof mod.default === 'function') {
       // Provide a simple mount API: mount(root, context)
       await mod.default($app, { route: screen, params: getQueryParams() });
+      
+      // Scroll to top on navigation
+      window.scrollTo(0, 0); 
+      
       // Focus for accessibility
       $app.focus();
     } else {
