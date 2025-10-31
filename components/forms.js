@@ -271,10 +271,10 @@ export function serviceRecommendationQuiz() {
       services['Automated Survey Creation and Collection'].on = true;
     }
 
-    // Q3: volunteerSize → Tasks & Volunteer Coordination if >= 25
+    // Q3: volunteerSize → Tasks Coordination if >= 25
     const volunteers = answers['volunteerSize'];
     if (volunteers === '<10' || volunteers === '10-25' || volunteers === '25+' || volunteers === '25-100' || volunteers === '100+') {
-      services['Tasks & Volunteer Coordination'].on = true;
+      services['Tasks Coordination'].on = true;
     }
     
     // Q5: reporting → Analytics & CRM Sync if dashboards
