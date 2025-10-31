@@ -156,7 +156,7 @@ export function serviceRecommendationQuiz() {
     `;
 
     const ctaRow = document.createElement('div');
-    ctaRow.style.display = 'grid';
+    ctaRow.style.display = 'grid'; 
     ctaRow.style.placeItems = 'center';
     ctaRow.style.marginTop = '16px';
 
