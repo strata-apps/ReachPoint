@@ -46,8 +46,8 @@ export default function mount(root) {
     holdTime: 1100,
   });
 
-  banner.style.marginTop = '18px';
-  
+  banner.style.paddingTop = '36px';
+
   root.appendChild(banner); 
 
   // Video of services from the assets folder (inside the components folder)
