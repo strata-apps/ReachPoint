@@ -67,7 +67,7 @@ export function serviceRecommendationQuiz() {
     },
     {
       id: 'callGrowth',
-      prompt: 'How do you hope your call volume to change in the next 6 months?',
+      prompt: 'How do you hope your call volume changes over the next 6 months?',
       options: [
         { label: 'Increase significantly', value: 'increase-significantly' },
         { label: 'Increase moderately', value: 'increase-moderately' },
@@ -102,15 +102,6 @@ export function serviceRecommendationQuiz() {
         { label: '10 – 25', value: '10-25' },
         { label: '25 – 100', value: '25-100' },
         { label: '100+', value: '100+' },
-      ],
-    },
-    {
-      id: 'bilingual',
-      prompt: 'Do you engage families in multiple languages?',
-      options: [
-        { label: 'Yes – English/Spanish', value: 'yes-es' },
-        { label: 'Yes – other languages', value: 'yes-other' },
-        { label: 'No', value: 'no' },
       ],
     },
     {
@@ -156,7 +147,7 @@ export function serviceRecommendationQuiz() {
     view.innerHTML = `
       <div class="card" style="text-align:center; padding: 40px;">
         <h1 class="card-title" style="font-size:26px; margin-bottom:8px;">
-          Discover how to best streamline communication and engagement for your organization
+          Learn how ReachPoint can best streamline outreach and engagement for your team
         </h1>
         <p style="color:var(--muted); margin:0 0 18px;">
           Answer a few quick questions to see which features will help your team most.
@@ -296,7 +287,7 @@ export function serviceRecommendationQuiz() {
     if (rep === 'exports') {
       services['Convenient Data Exporting'].on = true;
     }
-    
+
     // Q5: reporting → Accurate and Professional Written Reports if written
     if (rep === 'written') {
       services['Accurate and Professional Written Reports'].on = true;
