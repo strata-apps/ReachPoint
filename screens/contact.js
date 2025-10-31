@@ -83,7 +83,7 @@ export default function mount(root) {
   view.innerHTML = `
     <div class="card" style="padding: 26px;">
       <h2 class="card-title" style="font-size:24px; margin:0 0 12px;">
-        Let’s connect — tell us about your team
+        Let’s connect, schedule a demo — tell us about your team
       </h2>
       <p style="color:var(--muted); margin:0 0 16px;">
         Share a few details and our team will reach out shortly.
@@ -196,7 +196,6 @@ export default function mount(root) {
     // For now, show confirmation card
     view.innerHTML = `
       <div class="card" style="padding: 36px; text-align:center;">
-        <div style="font-size:44px; margin-bottom:10px;">✅</div>
         <h3 class="card-title" style="font-size:22px; margin:0 0 8px;">
           Thanks, ${firstName}! Your message has been sent.
         </h3>

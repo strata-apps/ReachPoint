@@ -344,7 +344,7 @@ export function serviceRecommendationQuiz() {
         </div>
         <div class="feature-cards" id="rec-cards"></div>
         <div style="text-align:center; margin-top:18px;">
-          <a href="#/demoschedule" class="btn primary" data-route>Schedule a Demo</a>
+          <a href="#/contact" class="btn primary" data-route>Schedule a Demo</a>
         </div>
       </section>
     `;

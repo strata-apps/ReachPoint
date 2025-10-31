@@ -125,7 +125,6 @@ export function ctaBandSection() {
     </div>
     <div class="cta-actions">
       <a class="btn primary" href="#/contact" data-route>Connect with our<br/>Team</a>
-      <a class="btn" style="background-color: #2563eb; color: #ffffff;" href="#/demoSchedule" data-route>Schedule<br/>Demo</a>
     </div>
   `;
   return cta;
