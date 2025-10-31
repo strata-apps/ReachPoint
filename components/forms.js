@@ -281,7 +281,7 @@ export function serviceRecommendationQuiz() {
 
     // Q1b: callGrowth → Automated Call Campaigns and Follow-Ups if increase significantly/moderately
     const growth = answers['callGrowth'];
-    if (growth === 'significantly' || growth === 'moderately' || growth === 'stay-same') {
+    if (growth === 'increase-significantly' || growth === 'increase-moderately' || growth === 'stay-same') {
       services['Automated Call Campaigns and Follow-Ups'].on = true;
     }
 
@@ -310,7 +310,7 @@ export function serviceRecommendationQuiz() {
 
     // Q3: volunteerSize → Tasks Coordination if >= 25
     const volunteers = answers['volunteerSize'];
-    if (volunteers === '<10' || volunteers === '10-25' || volunteers === '25+' || volunteers === '25-100' || volunteers === '100+') {
+    if (volunteers === '<10' || volunteers === '10-25' || volunteers === '25-100' || volunteers === '100+') {
       services['Tasks Coordination'].on = true;
     }
     
@@ -349,10 +349,10 @@ export function serviceRecommendationQuiz() {
       </section>
     `;
 
-    const grid = view.querySelector('#rec-grid');
+    const grid = view.querySelector('#rec-cards');
     if (enabled.length === 0) {
       grid.innerHTML = `
-        <article class="feature-card card">
+        <article class="feature-card card feature-card--slide">
           <div class="feature-icon">✨</div>
           <h3 class="feature-title">No specific picks yet</h3>
           <p class="feature-desc">Try different answers or contact us for a tailored workflow.</p>
@@ -362,7 +362,7 @@ export function serviceRecommendationQuiz() {
     }
 
     grid.innerHTML = enabled.map(([name, meta]) => `
-      <article class="feature-card card">
+      <article class="feature-card card feature-card--slide">
         <div class="feature-icon" aria-hidden="true">${meta.icon}</div>
         <h3 class="feature-title">${name}</h3>
         <p class="feature-desc">${meta.desc}</p>

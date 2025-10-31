@@ -3,11 +3,34 @@ import { serviceRecommendationQuiz } from '../components/forms.js';
 
 export default function mount(root) {
   root.innerHTML = `
-    <div class="sb-inner">
-      <h1 class="sb-title">
-        <span style="text-align:center; text-weight:bold">Powerful. Efficient.<span class="sb-service">Easy.</span></span>
-        <span class="sb-caret" aria-hidden="true"></span>
+    <div style="
+      width:100%;
+      padding:60px 24px 35px;
+      text-align:center;
+    ">
+      <h1 style="
+        font-size:clamp(36px, 6vw, 56px);
+        font-weight:900;
+        color:var(--ink);
+        letter-spacing:-0.5px;
+        line-height:1.1;
+        margin-bottom:12px;
+      ">
+        Powerful. Efficient.
+        <span style="color:var(--accent)">Easy.</span>
       </h1>
+
+      <p style="
+        font-size:20px;
+        font-weight:400;
+        color:var(--muted);
+        max-width:720px;
+        margin:0 auto;
+        line-height:1.5;
+      ">
+        Discover the smartest way to manage outreach and engagement —
+        designed for modern nonprofits, schools, and mission-driven teams.
+      </p>
     </div>
   `;               
   const quiz = serviceRecommendationQuiz();
