@@ -12,25 +12,40 @@ export function serviceRecommendationQuiz() {
       desc: 'Single place to dial, log outcomes, queue calls, and sync notes to contacts.',
       icon: '📞',
     },
+    'Automated Call Campaigns and Follow-Ups': {
+      on: false,
+      desc: 'Set up effective call lists and follow-up sequences to reach more people and meet your outreach goals.',
+      icon: '🤖',
+    },
+    'Collaborative Platform': {
+      on: false,
+      desc: 'Staff and volunteers can seamlessly work together and tackle individual efforts using our proprietary platform.',
+      icon: '👥',
+    },
     'Automated Survey Creation and Collection': {
       on: false,
       desc: 'Send announcements, reminders, and have real 2-way text conversations at scale.',
       icon: '💬',
     },
-    'Tasks & Volunteer Coordination': {
+    'Tasks Coordination': {
       on: false,
       desc: 'Create tasks, assign to staff/volunteers, track status, and follow up automatically.',
       icon: '🗂️',
-    },
-    'Bilingual Messaging & Templates': {
-      on: false,
-      desc: 'Pre-built English/Spanish templates and flows to reach more families effectively.',
-      icon: '🇺🇸🇲🇽',
     },
     'Analytics & CRM Sync': {
       on: false,
       desc: 'Dashboards and exports to share impact with donors and boards, synced to your CRM.',
       icon: '📊',
+    },
+    'Convenient Data Exporting': {
+      on: false,
+      desc: 'Easily export data for reporting and analysis.',
+      icon: '📥',
+    },
+    'Accurate and Professional Written Reports': {
+      on: false,
+      desc: 'Our team can deliver detailed written reports to share insights with all types of stakeholders.',
+      icon: '📝',
     },
   };
 
@@ -51,8 +66,27 @@ export function serviceRecommendationQuiz() {
       ],
     },
     {
+      id: 'callGrowth',
+      prompt: 'How do you hope your call volume to change in the next 6 months?',
+      options: [
+        { label: 'Increase significantly', value: 'increase-significantly' },
+        { label: 'Increase moderately', value: 'increase-moderately' },
+        { label: 'Stay the same but increase efficiency', value: 'stay-same' },
+      ],
+    },
+    {
+      id: 'callChallenges', 
+      prompt: 'What is your biggest challenge with phone outreach today?',
+      options: [
+        { label: 'Coordinating volunteers/staff', value: 'coordination' },
+        { label: 'Logging calls and notes', value: 'logging' },
+        { label: 'Making calls at scale', value: 'scale' },
+        { label: 'Effectively following up with contacts', value: 'follow-up' },
+      ],
+    },
+    {
       id: 'surveyCadence',
-      prompt: 'How often do you send SMS/text updates to your community?',
+      prompt: 'How often do you survey your community?',
       options: [
         { label: 'Weekly or more', value: 'weekly+' },
         { label: 'Monthly', value: 'monthly' },
@@ -84,8 +118,8 @@ export function serviceRecommendationQuiz() {
       prompt: 'How do you prefer to report results to donors/partners?',
       options: [
         { label: 'Real-time dashboards', value: 'dashboards' },
-        { label: 'Monthly exports are fine', value: 'exports' },
-        { label: 'We do not need reporting', value: 'none' },
+        { label: 'Data spreadsheets and exports', value: 'exports' },
+        { label: 'Written reports', value: 'written' },
       ],
     },
   ];
@@ -234,28 +268,38 @@ export function serviceRecommendationQuiz() {
       services['Unified Calling Interface'].on = true;
     }
 
+    // Q1b: callGrowth → Automated Call Campaigns and Follow-Ups if increase significantly/moderately
+    const growth = answers['callGrowth'];
+    if (growth === 'significantly' || growth === 'moderately' || growth === 'stay-same') {
+      services['Automated Call Campaigns and Follow-Ups'].on = true;
+    }
+
     // Q2: surveyCadence → Automated Survey Creation and Collection if weekly+ or planning
     const surveys = answers['surveyCadence'];
-    if (surveys === 'weekly+' || surveys === 'planning') {
+    if (surveys === 'weekly+' || surveys === 'planning' || surveys === 'monthly' || surveys === 'rare') {
       services['Automated Survey Creation and Collection'].on = true;
     }
 
     // Q3: volunteerSize → Tasks & Volunteer Coordination if >= 25
     const volunteers = answers['volunteerSize'];
-    if (volunteers === '25-100' || volunteers === '100+') {
+    if (volunteers === '<10' || volunteers === '10-25' || volunteers === '25+' || volunteers === '25-100' || volunteers === '100+') {
       services['Tasks & Volunteer Coordination'].on = true;
     }
-
-    // Q4: bilingual → Bilingual Messaging if any yes
-    const bi = answers['bilingual'];
-    if (bi === 'yes-es' || bi === 'yes-other') {
-      services['Bilingual Messaging & Templates'].on = true;
-    }
-
+    
     // Q5: reporting → Analytics & CRM Sync if dashboards
     const rep = answers['reporting'];
     if (rep === 'dashboards') {
       services['Analytics & CRM Sync'].on = true;
+    }
+
+    // Q5: reporting → Convenient Data Exporting if exports
+    if (rep === 'exports') {
+      services['Convenient Data Exporting'].on = true;
+    }
+    
+    // Q5: reporting → Accurate and Professional Written Reports if written
+    if (rep === 'written') {
+      services['Accurate and Professional Written Reports'].on = true;
     }
   }
 
