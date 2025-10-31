@@ -47,6 +47,11 @@ export function serviceRecommendationQuiz() {
       desc: 'Our team can deliver detailed written reports to share insights with all types of stakeholders.',
       icon: '📝',
     },
+    'Simplified Note-Taking Abilities': {
+      on: false,
+      desc: 'Easily log notes and outcomes during calls that can be referenced at any time.',
+      icon: '🗒️',
+    },
   };
 
   // --- Questionnaire (multiple choice only) ---
@@ -92,6 +97,16 @@ export function serviceRecommendationQuiz() {
         { label: 'Monthly', value: 'monthly' },
         { label: 'Rarely / Never', value: 'rare' },
         { label: 'Planning to start soon', value: 'planning' },
+      ],
+    },
+    {
+      id: 'interactions', 
+      prompt: 'How accurate and detailed are your community profiles and records of past interactions?',
+      options: [
+        { label: 'Very detailed but needs organization', value: 'very-accurate' },
+        { label: 'We have contact information but little records of past interactions', value: 'somewhat-accurate' },
+        { label: 'We have gaps in contact information and little record of past interactions', value: 'not-accurate' },
+        { label: 'We want to begin tracking this information', value: 'want-to-begin' },
       ],
     },
     {
@@ -255,7 +270,7 @@ export function serviceRecommendationQuiz() {
 
     // Q1: callsPerDay → Unified Calling Interface if 20+ / 30+ / 50+
     const calls = answers['callsPerDay'];
-    if (calls === '20+' || calls === '30+' || calls === '50+') {
+    if (calls === '<10' || calls === '10+' || calls === '20+' || calls === '30+' || calls === '50+' || calls === '100+') {
       services['Unified Calling Interface'].on = true;
     }
 
@@ -265,10 +280,22 @@ export function serviceRecommendationQuiz() {
       services['Automated Call Campaigns and Follow-Ups'].on = true;
     }
 
+    // challenges → Collaborative Platform if coordination/logging/scale/follow-up
+    const chall = answers['callChallenges'];
+    if (chall === 'coordination' || chall === 'logging' || chall === 'scale' || chall === 'follow-up') {
+      services['Unified Calling Interface'].on = true;
+    }
+
     // Q2: surveyCadence → Automated Survey Creation and Collection if weekly+ or planning
     const surveys = answers['surveyCadence'];
     if (surveys === 'weekly+' || surveys === 'planning' || surveys === 'monthly' || surveys === 'rare') {
       services['Automated Survey Creation and Collection'].on = true;
+    }
+
+    // interactions → Simplified Note-Taking Abilities for any answer
+    const inter = answers['interactions'];
+    if (inter === 'very-accurate' || inter === 'somewhat-accurate' || inter === 'not-accurate' || inter === 'want-to-begin') {
+      services['Simplified Note-Taking Abilities'].on = true;
     }
 
     // Q3: volunteerSize → Tasks Coordination if >= 25
