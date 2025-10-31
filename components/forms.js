@@ -52,6 +52,11 @@ export function serviceRecommendationQuiz() {
       desc: 'Easily log notes and outcomes during calls that can be referenced at any time.',
       icon: '🗒️',
     },
+    'Advanced Engagement Over Time': {
+      on: false,
+      desc: 'Interactions with your contacts are automatically tracked over time without needing to waste time manually inputting data.',
+      icon: '⏳',
+    },
   };
 
   // --- Questionnaire (multiple choice only) ---
@@ -283,7 +288,7 @@ export function serviceRecommendationQuiz() {
     // challenges → Collaborative Platform if coordination/logging/scale/follow-up
     const chall = answers['callChallenges'];
     if (chall === 'coordination' || chall === 'logging' || chall === 'scale' || chall === 'follow-up') {
-      services['Unified Calling Interface'].on = true;
+      services['Collaborative Platform'].on = true;
     }
 
     // Q2: surveyCadence → Automated Survey Creation and Collection if weekly+ or planning
@@ -292,10 +297,15 @@ export function serviceRecommendationQuiz() {
       services['Automated Survey Creation and Collection'].on = true;
     }
 
+    const notes = answers['surveyCadence'];
+    if (notes === 'weekly+' || notes === 'planning' || notes === 'monthly' || notes === 'rare') {
+      services['Simplified Note-Taking Abilities'].on = true;
+    }
+
     // interactions → Simplified Note-Taking Abilities for any answer
     const inter = answers['interactions'];
     if (inter === 'very-accurate' || inter === 'somewhat-accurate' || inter === 'not-accurate' || inter === 'want-to-begin') {
-      services['Simplified Note-Taking Abilities'].on = true;
+      services['Advanced Engagement Over Time'].on = true;
     }
 
     // Q3: volunteerSize → Tasks Coordination if >= 25
@@ -334,8 +344,7 @@ export function serviceRecommendationQuiz() {
         </div>
         <div class="feature-grid" id="rec-grid"></div>
         <div style="text-align:center; margin-top:18px;">
-          <a href="#/services" class="btn" data-route>Back to Services</a>
-          <a href="#/landing" class="btn primary" data-route>Return Home</a>
+          <a href="#/demo" class="btn primary" data-route>Schedule a Demo</a>
         </div>
       </section>
     `;
