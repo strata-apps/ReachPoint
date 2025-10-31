@@ -2,22 +2,34 @@
 export default function mount(root) {
   // Top + paragraph + "Meet the Team" using existing styles
   root.innerHTML = `
-    <div class="sb-inner">
-      <h1 class="sb-title">
-        <span style="font-weight: bolder;">Bringing Enterprise Level Solutions to Grassroot Movements</span>
-        <span class="sb-caret" aria-hidden="true"></span>
+    <div style="
+      width:100%;
+      padding:60px 24px 10px;
+      text-align:center;
+    ">
+      <h1 style="
+        font-size:clamp(36px, 6vw, 56px);
+        font-weight:900;
+        color:var(--ink);
+        letter-spacing:-0.5px;
+        line-height:1.1;
+        margin-bottom:1px;
+      ">
+        Bringing Enterprise Level Solutions to 
+        <span style="color:var(--accent)">Grassroot Movements.</span>
       </h1>
-      <p class="sb-sub">The mission behind ReachPoint is to ensure that service-oriented nonprofits, small businesses, academic institutions and any grassroot movements are able to effectively serve their communities without economic and technological barriers. These businesses and organizations are the lifeline of our communities. Our mission is to help you reach your mission.</p>
+
+      <p style="
+        font-size:20px;
+        font-weight:400;
+        color:var(--muted);
+        max-width:720px;
+        margin:0 auto;
+        line-height:1.5;
+      ">
+      The mission behind ReachPoint is to ensure that service-oriented nonprofits, small businesses, academic institutions and any grassroot movements are able to effectively serve their communities without economic and technological barriers. These businesses and organizations are the lifeline of our communities. Our mission is to help you reach your mission.
+      </p>
     </div>
-
-    <section class="features reveal" aria-labelledby="team-title">
-      <div class="features-head">
-        <h2 id="team-title" class="features-title">Meet the Team</h2>
-        <p class="features-sub">Our team brings together talented, Ivy-league professionals who have a passion for public service.</p>
-      </div>
-
-      <div class="feature-grid" id="team-grid"></div>
-    </section>
   `;
 
   // Example team data (edit as you like)

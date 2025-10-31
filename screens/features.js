@@ -5,7 +5,7 @@ export default function mount(root) {
   root.innerHTML = `
     <div style="
       width:100%;
-      padding:60px 24px 35px;
+      padding:60px 24px 10px;
       text-align:center;
     ">
       <h1 style="
@@ -19,18 +19,10 @@ export default function mount(root) {
         Powerful. Efficient.
         <span style="color:var(--accent)">Easy.</span>
       </h1>
-
-      <p style="
-        font-size:20px;
-        font-weight:400;
-        color:var(--muted);
-        max-width:720px;
-        margin:0 auto;
-        line-height:1.5;
-      ">
-      </p>
     </div>
   `;               
   const quiz = serviceRecommendationQuiz();
-  root.appendChild(quiz);            // full-screen quiz
+  quiz.style.marginTop = "-10px";      // pull quiz up slightly
+  quiz.style.paddingTop = "0px";        // remove default padding
+  root.appendChild(quiz);           // full-screen quiz
 }
