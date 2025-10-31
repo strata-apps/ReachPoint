@@ -47,6 +47,7 @@ export default function mount(root) {
   });
 
   banner.style.paddingTop = '36px';
+  banner.style.marginTop = '28px';
 
   root.appendChild(banner); 
 

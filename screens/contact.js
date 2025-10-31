@@ -192,7 +192,7 @@ export default function mount(root) {
       return;
     }
 
-    // TODO: send to your backend / Supabase if desired
+    // TODO: send to backend 
     // For now, show confirmation card
     view.innerHTML = `
       <div class="card" style="padding: 36px; text-align:center;">
