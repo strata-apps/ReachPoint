@@ -14,7 +14,7 @@ export default function mount(root) {
         color:var(--ink);
         letter-spacing:-0.5px;
         line-height:1.1;
-        margin-bottom:12px;
+        margin-bottom:1px;
       ">
         Powerful. Efficient.
         <span style="color:var(--accent)">Easy.</span>
@@ -28,8 +28,6 @@ export default function mount(root) {
         margin:0 auto;
         line-height:1.5;
       ">
-        Discover the smartest way to manage outreach and engagement —
-        designed for modern nonprofits, schools, and mission-driven teams.
       </p>
     </div>
   `;               

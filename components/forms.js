@@ -339,7 +339,7 @@ export function serviceRecommendationQuiz() {
     view.innerHTML = `
       <section class="features" aria-labelledby="rec-title">
         <div class="features-head">
-          <h2 id="rec-title" class="features-title">Recommended for your organization</h2>
+          <h2 id="rec-title" class="features-title">We have everything you need</h2>
           <p class="features-sub">Based on your answers, these features will help you streamline outreach and engagement.</p>
         </div>
         <div class="feature-cards" id="rec-cards"></div>
