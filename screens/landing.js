@@ -11,6 +11,7 @@ import {
 export default function mount(root) {
   // Clear the screen
   root.innerHTML = '';
+  window.scrollTo(0, 0);
 
   // --- Scroll-reveal setup ---------------------------------
   const io = new IntersectionObserver((entries) => {
@@ -45,10 +46,6 @@ export default function mount(root) {
     // deleteSpeed: 45,
     holdTime: 1100,
   });
-
-  banner.style.paddingTop = '36px';
-  banner.style.marginTop = '28px';
-
   root.appendChild(banner); 
 
   // Video of services from the assets folder (inside the components folder)
