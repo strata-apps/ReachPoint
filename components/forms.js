@@ -342,7 +342,7 @@ export function serviceRecommendationQuiz() {
           <h2 id="rec-title" class="features-title">Recommended for your organization</h2>
           <p class="features-sub">Based on your answers, these features will help you streamline outreach and engagement.</p>
         </div>
-        <div class="feature-grid" id="rec-grid"></div>
+        <div class="feature-cards" id="rec-cards"></div>
         <div style="text-align:center; margin-top:18px;">
           <a href="#/demo" class="btn primary" data-route>Schedule a Demo</a>
         </div>
@@ -368,6 +368,15 @@ export function serviceRecommendationQuiz() {
         <p class="feature-desc">${meta.desc}</p>
       </article>`
     ).join('');
+
+    const row = view.querySelector('.feature-cards');
+    row.addEventListener('wheel', (e) => {
+      if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+        row.scrollLeft += e.deltaY;
+        e.preventDefault();
+      }
+    }, { passive: false });
+
   }
 
   // Initial render (intro)
