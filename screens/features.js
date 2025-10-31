@@ -5,7 +5,7 @@ export default function mount(root) {
   root.innerHTML = `
     <div style="
       width:100%;
-      padding:60px 24px 10px;
+      padding:60px 24px 8px;
       text-align:center;
     ">
       <h1 style="
@@ -14,7 +14,7 @@ export default function mount(root) {
         color:var(--ink);
         letter-spacing:-0.5px;
         line-height:1.1;
-        margin-bottom:1px;
+        margin-bottom:0px;
       ">
         Powerful. Efficient.
         <span style="color:var(--accent)">Easy.</span>
