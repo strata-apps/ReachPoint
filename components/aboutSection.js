@@ -14,14 +14,14 @@ export function aboutSection() {
       <h2 style="
         font-size:clamp(34px, 5vw, 52px);
         font-weight:900;
-        color:#111827;          /* deep slate (screenshot exact) */
+        color:#111827;        
         letter-spacing:-0.5px;
         line-height:1.15;
         margin:0 0 18px 0;
       ">
         Bringing Enterprise-Level Solutions to
         <span style="
-          color:#2563eb;        /* EXACT blue from screenshot */
+          color:#2563eb;       
         ">
           Grassroots Movements.
         </span>
@@ -31,7 +31,7 @@ export function aboutSection() {
       <p style="
         font-size:18px;
         font-weight:400;
-        color:#6b7280;          /* gray-500 exactly */
+        color:#6b7280;          
         max-width:720px;
         margin:0 auto;
         line-height:1.6;
@@ -45,7 +45,6 @@ export function aboutSection() {
     </div>
   `;
 
-  sec.classList.add('reveal');
   return sec;
 }
 
