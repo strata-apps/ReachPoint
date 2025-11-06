@@ -54,7 +54,11 @@ export function servicesSection() {
     const card = document.createElement('article');
     card.className = 'card feature-card';
     card.innerHTML = `
-      <div class="feature-icon" aria-hidden="true">${f.emoji}</div>
+      <div class="feature-icon" aria-hidden="true">
+        ${f.icon
+          ? `<img src="${f.icon}" alt="" class="feature-icon-img" />`
+          : f.emoji || ''}
+      </div>
       <h3 class="feature-title">${f.title}</h3>
       <p class="feature-desc">${f.desc}</p>
     `;
