@@ -160,10 +160,12 @@ export function ctaBandSection() {
 export function comparisonMatrixSection() {
   const rows = [
     ['Task Creation and Management', true,  true,  false],
-    ['Real-Time Insights',           true,  false, false],
+    ['Real-Time Outreach Insights', true,  false, true],
     ['Flexible Event Creation',     true,  false, true ],
     ['Unified Caller Interface',    true,  false, false],
     ['Client-Facing Dynamic DB',    true,  false, true ],
+    ['Automated Targeted Outreach',  true,  false, false],
+    ['Customizable Email Campaigns',  true,  true,  false]
   ];
 
   const sec = document.createElement('section');
