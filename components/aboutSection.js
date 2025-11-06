@@ -45,7 +45,7 @@ export function aboutSection() {
     </div>
   `;
 
-  //sec.classList.add('reveal');
+  sec.classList.add('reveal');
   return sec;
 }
 
