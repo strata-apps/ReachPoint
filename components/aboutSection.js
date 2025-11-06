@@ -39,4 +39,4 @@ export function aboutSection() {
   // optional fade-in if you use IntersectionObserver elsewhere
   sec.classList.add('reveal');
   return sec;
-}
+} 
