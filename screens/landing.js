@@ -90,4 +90,4 @@ export default function mount(root) {
 
   // CTA band
   root.appendChild(ctaBandSection());
-} 
+}  
