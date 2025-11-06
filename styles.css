@@ -317,3 +317,40 @@ body {
   display: block;
   margin: 0 auto 8px auto;
 }
+
+/* Make icon wrapper invisible and remove any inherited “pill” styling */
+.feature-icon--plain {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: 0 !important;
+  padding: 0 !important;
+  width: auto;
+  height: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Size the icon image itself */
+.feature-icon-img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  display: block;
+  margin: 0 0 8px 0; /* space below the icon */
+}
+
+/* Starting state */
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 480ms ease, transform 480ms ease;
+  will-change: opacity, transform;
+}
+
+/* When visible */
+.reveal--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+

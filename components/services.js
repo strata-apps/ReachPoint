@@ -52,7 +52,7 @@ export function servicesSection() {
   grid.className = 'feature-grid';
   features.forEach((f) => {
     const card = document.createElement('article');
-    card.className = 'card feature-card';
+    card.className = 'card feature-card reveal';
     card.innerHTML = `
       <div class="feature-icon" aria-hidden="true">
         ${f.icon
@@ -65,6 +65,28 @@ export function servicesSection() {
     grid.appendChild(card);
   });
   section.appendChild(grid);
+
+  // Reveal-on-scroll
+  const cards = grid.querySelectorAll('.feature-card.reveal');
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add('reveal--visible');
+          // unobserve once revealed to avoid repeated work
+          io.unobserve(e.target);
+        }
+      });
+    },
+    { root: null, rootMargin: '0px 0px -10% 0px', threshold: 0.1 }
+  );
+
+  // Stagger for a nicer cascade
+  cards.forEach((c, i) => {
+    c.style.transitionDelay = `${Math.min(i * 60, 240)}ms`;
+    io.observe(c);
+  });
+
 
   return section;
 }
@@ -105,7 +127,7 @@ export function servicesActionSection() {
   grid.className = 'action-grid';
   data.forEach(d => {
     const card = document.createElement('article');
-    card.className = 'card action-card';
+    card.className = 'card action-card reveal';
     card.innerHTML = `
       <div class="tag">${d.tag}</div>
       <div class="media-placeholder" aria-hidden="true"></div>
