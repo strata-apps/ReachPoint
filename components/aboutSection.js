@@ -40,3 +40,4 @@ export function aboutSection() {
   sec.classList.add('reveal');
   return sec;
 } 
+ 
