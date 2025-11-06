@@ -165,7 +165,7 @@ export function comparisonMatrixSection() {
     ['Unified Caller Interface',    true,  false, false],
     ['Client-Facing Dynamic DB',    true,  false, true ],
     ['Automated Targeted Outreach',  true,  false, false],
-    ['Customizable Email Campaigns',  true,  true,  false]
+    ['Customizable HTML Email Campaigns',  true,  true,  false]
   ];
 
   const sec = document.createElement('section');
