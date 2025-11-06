@@ -2,32 +2,32 @@
 export function servicesSection() {
   const features = [
     {
-      emoji: '📞',
+      icon: 'https://cdn-icons-png.flaticon.com/128/6787/6787101.png',
       title: 'Unified Calling Interface',
       desc: 'Make calls, view recipient information, inspect prior interactions, log responses and document notes all from one screen. No switching between spreadsheets!',
     },
     {
-      emoji: '🧠',
+      icon: 'https://cdn-icons-png.flaticon.com/128/4236/4236747.png',
       title: 'Smart Contact Management',
       desc: 'Organize and filter your contacts to create targeted call campaigns. Query your database to find the right prospects.',
     },
     {
-      emoji: '🧾',
+      icon: 'https://cdn-icons-png.flaticon.com/128/60/60492.png',
       title: 'Comprehensive Documentation',
       desc: 'Every interaction, survey response, and note is automatically stored in a backend database for your records and future reference.',
     },
     {
-      emoji: '📊',
+      icon: 'https://cdn-icons-png.flaticon.com/128/1548/1548914.png',
       title: 'Real-time Insights',
       desc: 'Get instant analytics on your outreach performance to inform your strategy and better understand your community’s needs.',
     },
     {
-      emoji: '🎯',
+      icon: 'https://cdn-icons-png.flaticon.com/128/9628/9628636.png',
       title: 'Campaign Filtering',
       desc: 'Create dynamic segments and launch new campaigns based on your contacts’ actions and responses.',
     },
     {
-      emoji: '🛡️',
+      icon: 'https://cdn-icons-png.flaticon.com/128/16032/16032744.png',
       title: 'Secure Backend Storage',
       desc: 'All progress and data live in a secure, enterprise-grade database with automatic backups.',
     },
