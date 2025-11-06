@@ -1,5 +1,6 @@
 // Landing/screens/landing.js
 import { servicesBanner } from '../components/servicesBanner.js';
+import { aboutSection } from '../components/aboutSection.js';
 import {
   servicesSection,
   servicesActionSection,
@@ -76,6 +77,10 @@ export default function mount(root) {
 
   // features section
   root.appendChild(servicesSection());
+
+  // About Section
+  root.appendChild(aboutSection());
+
 
   // Comparison matrix
   root.appendChild(comparisonMatrixSection());
